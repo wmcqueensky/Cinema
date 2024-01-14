@@ -1,0 +1,12 @@
+/extlibs/
+/target/
+/boost_1_60_0.zip
+/nbproject/
+CMakeFiles/
+Makefile
+*.dll
+*.a
+*.exe
+.idea
+cmake-build-debug/
+.DS_Store
