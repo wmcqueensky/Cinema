@@ -7,6 +7,6 @@ Makefile
 *.dll
 *.a
 *.exe
-.idea
+Cinema/.idea
 cmake-build-debug/
 .DS_Store
