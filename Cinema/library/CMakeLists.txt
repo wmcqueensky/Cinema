@@ -4,7 +4,12 @@ project(Library)
 
 set(SOURCE_FILES
         include/Ticket.h
-        src/Ticket.cpp)
+        src/Ticket.cpp
+        include/ReducedTicket.h
+        src/ReducedTicket.cpp
+        include/NormalTicket.h
+        src/NormalTicket.cpp
+        src/ReducedTicket.cpp)
 
 
 add_library(Library ${SOURCE_FILES})

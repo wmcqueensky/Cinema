@@ -4,40 +4,25 @@
 
 #ifndef CINEMA_TICKET_H
 #define CINEMA_TICKET_H
-
-#include <memory>
 #include <string>
 
-class Movie;  // Forward declaration
-
 class Ticket {
-private:
+protected:
     int ticketNumber;
     float price;
     std::string movieName;
     int seatNumber;
-    std::unique_ptr<Movie> movie;
 
 public:
-    Ticket();
-    ~Ticket() = default;
+    Ticket(int ticketNumber, float price, const std::string& movieName, int seatNumber);
+    virtual ~Ticket() = default;
 
     int getTicketNumber() const;
-    void setTicketNumber(int ticketNumber);
-
     float getPrice() const;
-    void setPrice(float price);
-
     const std::string& getMovieName() const;
-    void setMovieName(const std::string& movieName);
-
     int getSeatNumber() const;
-    void setSeatNumber(int seatNumber);
 
-    void createTicket();
-    std::string getTicketDetails() const;
-
-    void setMovie(const std::unique_ptr<Movie>& movie);
+    virtual std::string getTicketDetails() const = 0;
 };
 
 #endif //CINEMA_TICKET_H
