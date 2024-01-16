@@ -17,7 +17,8 @@ add_library(Library ${SOURCE_FILES})
 target_include_directories(Library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(SOURCE_TEST_FILES
-        test/master.cpp)
+        test/master.cpp
+        test/TicketTest.cpp)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
