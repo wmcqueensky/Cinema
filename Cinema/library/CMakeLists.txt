@@ -9,7 +9,8 @@ set(SOURCE_FILES
         src/ReducedTicket.cpp
         include/NormalTicket.h
         src/NormalTicket.cpp
-        src/ReducedTicket.cpp)
+        include/Movie.h
+        src/Movie.cpp)
 
 
 add_library(Library ${SOURCE_FILES})
@@ -18,7 +19,8 @@ target_include_directories(Library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 set(SOURCE_TEST_FILES
         test/master.cpp
-        test/TicketTest.cpp)
+        test/TicketTest.cpp
+        test/Movietest.cpp)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include

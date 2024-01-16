@@ -9,7 +9,6 @@
 ReducedTicket::ReducedTicket(int ticketNumber, float price, const std::string& movieName, int seatNumber, float discount)
         : Ticket(ticketNumber, price, movieName, seatNumber), discount(discount) {
     this->price -= this->price * discount;
-    this->price = std::round(this->price * 100.0) / 100.0;
 }
 
 std::string ReducedTicket::getTicketDetails() const {

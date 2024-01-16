@@ -8,7 +8,7 @@
 
 
 NormalTicket::NormalTicket(int ticketNumber, float price, const std::string& movieName, int seatNumber)
-        : Ticket(ticketNumber, std::round(price * 100.0) / 100.0, movieName, seatNumber) {
+        : Ticket(ticketNumber, price, movieName, seatNumber) {
 
 }
 
