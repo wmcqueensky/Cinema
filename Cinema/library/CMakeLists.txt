@@ -21,7 +21,9 @@ set(SOURCE_FILES
         include/Client.h
         src/Client.cpp
         include/Snack.h
-        src/Snack.cpp)
+        src/Snack.cpp
+        include/Transaction.h
+        src/Transaction.cpp)
 
 
 add_library(Library ${SOURCE_FILES})
@@ -35,7 +37,8 @@ set(SOURCE_TEST_FILES
         test/SeatTest.cpp
         test/RoomTest.cpp
         test/ClientTest.cpp
-        test/SnackTest.cpp)
+        test/SnackTest.cpp
+        test/TransactionTest.cpp)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
