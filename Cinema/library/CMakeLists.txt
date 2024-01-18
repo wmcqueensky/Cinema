@@ -17,7 +17,9 @@ set(SOURCE_FILES
         include/Room2D.h
         src/Room2D.cpp
         include/Room3D.h
-        src/Room3D.cpp)
+        src/Room3D.cpp
+        include/Client.h
+        src/Client.cpp)
 
 
 add_library(Library ${SOURCE_FILES})
@@ -29,7 +31,8 @@ set(SOURCE_TEST_FILES
         test/TicketTest.cpp
         test/Movietest.cpp
         test/SeatTest.cpp
-        test/RoomTest.cpp)
+        test/RoomTest.cpp
+        test/ClientTest.cpp)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
