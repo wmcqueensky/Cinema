@@ -10,7 +10,14 @@ set(SOURCE_FILES
         include/NormalTicket.h
         src/NormalTicket.cpp
         include/Movie.h
-        src/Movie.cpp)
+        src/Movie.cpp
+        include/Seat.h
+        src/Seat.cpp
+        src/Room.cpp
+        include/Room2D.h
+        src/Room2D.cpp
+        include/Room3D.h
+        src/Room3D.cpp)
 
 
 add_library(Library ${SOURCE_FILES})
@@ -20,7 +27,9 @@ target_include_directories(Library PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 set(SOURCE_TEST_FILES
         test/master.cpp
         test/TicketTest.cpp
-        test/Movietest.cpp)
+        test/Movietest.cpp
+        test/SeatTest.cpp
+        test/RoomTest.cpp)
 
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/include
