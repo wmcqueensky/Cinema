@@ -14,15 +14,15 @@ protected:
     int seatNumber;
 
 public:
-    Ticket(int ticketNumber, float price, const std::string& movieName, int seatNumber);
+    Ticket(int ticketNumber, float price, std::string  movieName, int seatNumber);
     virtual ~Ticket() = default;
 
-    int getTicketNumber() const;
-    float getPrice() const;
-    const std::string& getMovieName() const;
-    int getSeatNumber() const;
+    [[nodiscard]] int getTicketNumber() const;
+    [[nodiscard]] float getPrice() const;
+    [[nodiscard]] const std::string& getMovieName() const;
+    [[nodiscard]] int getSeatNumber() const;
 
-    virtual std::string getTicketDetails() const = 0;
+    [[nodiscard]] virtual std::string getTicketDetails() const = 0;
 };
 
 #endif //CINEMA_TICKET_H

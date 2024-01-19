@@ -3,14 +3,24 @@
 //
 
 #include "NormalTicket.h"
+#include <iomanip>
+#include <sstream>
+
 
 NormalTicket::NormalTicket(int ticketNumber, float price, const std::string& movieName, int seatNumber)
-        : Ticket(ticketNumber, price, movieName, seatNumber) {}
+        : Ticket(ticketNumber, price, movieName, seatNumber) {
+
+}
 
 std::string NormalTicket::getTicketDetails() const {
-    return std::string("Ticket Details: ") +
-           "\nTicket Number: " + std::to_string(ticketNumber) +
-           "\nPrice: " + std::to_string(price) +
-           "\nMovie Name: " + movieName +
-           "\nSeat Number: " + std::to_string(seatNumber);
+    std::ostringstream stream;
+    stream << std::fixed << std::setprecision(2);
+
+    stream << "Ticket Details "
+           << "\nTicket Number: " << ticketNumber
+           << "\nPrice: " << price
+           << "\nMovie Name: " << movieName
+           << "\nSeat Number: " << seatNumber;
+
+    return stream.str();
 }
